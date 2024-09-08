@@ -1,0 +1,8 @@
+.city-row {
+  cursor: pointer;
+}
+.city-name {
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(34, 6, 163);
+}

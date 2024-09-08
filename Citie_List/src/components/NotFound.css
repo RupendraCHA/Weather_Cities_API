@@ -1,0 +1,15 @@
+.not-found-container {
+  background-color: azure;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.not-found-warning-text {
+  line-height: 1.5;
+  font-family: "Roboto";
+}
+.navigate-text {
+  font-size: 18px;
+  font-weight: 600;
+}
