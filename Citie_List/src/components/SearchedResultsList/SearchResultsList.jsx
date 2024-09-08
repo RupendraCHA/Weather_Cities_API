@@ -1,6 +1,6 @@
 import React from 'react'
 import "./SearchResultsList.css"
-import SearchResults from './SearchResults'
+import SearchResults from '../SearchResultsItem/SearchResultsItem'
 
 const SearchResultsList = (props) => {
 

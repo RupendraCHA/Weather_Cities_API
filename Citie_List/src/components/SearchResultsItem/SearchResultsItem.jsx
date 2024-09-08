@@ -1,6 +1,6 @@
 import React from 'react'
 import { MdArrowOutward } from "react-icons/md";
-import "./SearchResults.css"
+import "./SearchResultsItem.css"
 import { Link } from 'react-router-dom';
 
 const SearchResults = (props) => {

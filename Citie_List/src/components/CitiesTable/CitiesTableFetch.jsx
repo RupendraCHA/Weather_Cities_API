@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import SearchBar from './components/searchBar'
-import SearchResultsList from './components/SearchResultsList'
-import CityItem from './components/CityItem'
+import SearchBar from '../SearchBar/searchBar'
+import SearchResultsList from '../SearchedResultsList/SearchResultsList'
+import CityItem from '../CityRowData/CityItem'
 import "./CitiesTableFetch.css"
 
 function CitiesTableFetch() {
@@ -38,10 +38,11 @@ function CitiesTableFetch() {
                 <SearchResultsList results={results} />
             </div>
             <div>
-                <h1>Select the city to view its current and forecast weather</h1>
+                <h1>Select the city to view its current and forecast weather:</h1>
                 <table className='table'>
                     <thead>
                         <tr>
+                            <th>S.No</th>
                             <th>City</th>
                             <th>Country</th>
                             <th>Timezone</th>
@@ -52,7 +53,8 @@ function CitiesTableFetch() {
                     <tbody>
                         {
                             citiesData.map((city, index) => {
-                                return <CityItem city={city} key={index} />
+                                {/* console.log(index) */ }
+                                return <CityItem city={city} key={index} index={index} />
                             })
                         }
                     </tbody>

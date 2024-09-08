@@ -1,7 +1,7 @@
-import CitiesTableFetch from "./CitiesTableFetch";
+import CitiesTableFetch from "./components/CitiesTable/CitiesTableFetch";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import CityView from "./components/CityView";
-import NotFound from "./components/NotFound";
+import CityView from "./components/CityWeatherView/CityWeatherView";
+import NotFound from "./components/NotFoundPage/NotFound";
 
 import React from 'react'
 

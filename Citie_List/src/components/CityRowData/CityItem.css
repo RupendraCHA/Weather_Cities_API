@@ -1,0 +1,16 @@
+.city-row {
+  cursor: pointer;
+}
+.city-name {
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(34, 6, 163);
+}
+.city-name:hover {
+  background-color: #000;
+  color: #fff;
+  padding: 12px;
+  font-size: 22px;
+  transition: 0.2s ease;
+  border-radius: 5px;
+}
