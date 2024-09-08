@@ -1,13 +1,10 @@
-.not-found-container {
-  background-color: azure;
+.city-weather-container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.not-found-warning-text {
-  line-height: 1.5;
-  font-family: "Roboto";
+.weather-card {
   padding: 15px;
   background: #d3c7c7;
   text-align: center;
@@ -16,8 +13,4 @@
   color: rgb(200, 8, 110);
   font-weight: 600;
   min-height: 200px;
-}
-.navigate-text {
-  font-size: 18px;
-  font-weight: 600;
 }

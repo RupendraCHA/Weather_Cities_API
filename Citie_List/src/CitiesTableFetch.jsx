@@ -38,7 +38,7 @@ function CitiesTableFetch() {
                 <SearchResultsList results={results} />
             </div>
             <div>
-                <h3>Select the city to view its current and forecast weather</h3>
+                <h1>Select the city to view its current and forecast weather</h1>
                 <table className='table'>
                     <thead>
                         <tr>
