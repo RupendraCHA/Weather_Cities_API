@@ -18,6 +18,7 @@ function CitiesTableFetch() {
         const data = await response.json()
         setCitiesData(data.results)
     }
+    // console.log(cityList)
 
     const searchedResults = (filteredData, value) => {
         if (value !== "") {
