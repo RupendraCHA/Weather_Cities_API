@@ -19,7 +19,7 @@ const SearchBar = (props) => {
                     return value && city && city.name && city.name.toLowerCase().includes(value)
                 })
                 setResults(data)
-                console.log(data)
+                // console.log(data)
                 searchedResults(data, value)
             })
 

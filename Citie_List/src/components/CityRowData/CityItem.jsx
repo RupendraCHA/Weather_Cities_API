@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from "react-router-dom"
 import "./CityItem.css"
 import { Dropdown } from "antd"
+// import CurrentWeatherCard from "../CurrentWeatherCard/CurrentWeatherCard"
 
 const CityItem = (props) => {
 
-  const { city, index } = props
+  const { city, index, getCityViewIsActiveOrNot, isClicked } = props
 
-  const handleOnclick = (city) => {
-    console.log(city.name)
+  const handleOnclick = (a, name) => {
+    getCityViewIsActiveOrNot(a, name)
+    // getCityName(name)
+    // console.log(a)
+    // console.log(name)
   }
 
   const items = [
@@ -25,7 +29,7 @@ const CityItem = (props) => {
     (<tr className='city-row' key={city.id}>
       <td>{index + 1}</td>
       <Dropdown menu={{ items }} trigger={['contextMenu']}>
-        <td onClick={() => handleOnclick(city)}><Link to="/cityWeather" className='city-name'>
+        <td onClick={() => handleOnclick(true, city.name)}><Link to="/cityWeather" className='city-name'>
           {city.name}
         </Link></td>
       </Dropdown>

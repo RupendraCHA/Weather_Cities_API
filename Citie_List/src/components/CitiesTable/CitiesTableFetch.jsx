@@ -3,11 +3,14 @@ import SearchBar from '../SearchBar/searchBar'
 import SearchResultsList from '../SearchedResultsList/SearchResultsList'
 import CityItem from '../CityRowData/CityItem'
 import "./CitiesTableFetch.css"
+import CityView from '../CityWeatherView/CityWeatherView'
 
 function CitiesTableFetch() {
 
     const [results, setResults] = useState([])
     const [citiesData, setCitiesData] = useState([])
+    const [isClicked, setValue] = useState(false)
+    const [cityName, setCityName] = useState("Delhi")
 
 
     const getCitiesData = async () => {
@@ -25,6 +28,17 @@ function CitiesTableFetch() {
 
     }
 
+    const getCityViewIsActiveOrNot = (boolValue, name) => {
+        setValue(boolValue)
+        setCityName(name)
+        // console.log(boolValue)
+        // console.log(name)
+    }
+
+    // const getCityName = (cityName) => {
+    //     // console.log(cityName)
+
+    // }
 
     useEffect(() => {
         getCitiesData();
@@ -32,6 +46,7 @@ function CitiesTableFetch() {
 
 
     return (
+
         <div className='app'>
             <div className='search-bar-container'>
                 <SearchBar setResults={setResults} searchedResults={searchedResults} />
@@ -54,12 +69,21 @@ function CitiesTableFetch() {
                         {
                             citiesData.map((city, index) => {
                                 {/* console.log(index) */ }
-                                return <CityItem city={city} key={index} index={index} />
+                                return <CityItem city={city} key={index}
+                                    index={index}
+                                    getCityViewIsActiveOrNot={getCityViewIsActiveOrNot}
+                                    isClicked={isClicked}
+
+                                />
                             })
                         }
                     </tbody>
                 </table>
             </div>
+            <div style={{ display: "none" }}>
+                <CityView cityName={cityName} />
+            </div>
+
         </div>
     )
 }

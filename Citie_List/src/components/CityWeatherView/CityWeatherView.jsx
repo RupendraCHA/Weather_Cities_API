@@ -2,10 +2,14 @@ import React from 'react'
 import "./CityWeatherView.css"
 import CurrentWeather from '../CurrentWeatherCard/CurrentWeatherCard'
 
-const CityView = () => {
+const CityView = (props) => {
+
+    const { cityName } = props
+    console.log(cityName)
+
     return (
         <>
-            <CurrentWeather />
+            <CurrentWeather cityName={cityName} />
         </>
 
     )
